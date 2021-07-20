@@ -127,6 +127,8 @@
     [self.shareButton.layer setShadowRadius:1.0];
     [self.shareButton.layer setShadowOffset:CGSizeMake(0.0,0.0)];
     self.shareButton.layer.masksToBounds = NO;
+    self.shareButton.enabled = NO;
+    self.shareButton.alpha = 0.5;
     
     
     
@@ -153,6 +155,8 @@
         self.drawButton.hidden = NO;
         self.resetButton.hidden = YES;
     } else if (self.drawButton.hidden == NO && self.resetButton.hidden == YES){
+        self.shareButton.enabled = YES;
+        self.shareButton.alpha = 1.0;
         self.openPaletteButton.enabled = NO;
         self.openPaletteButton.alpha = 0.5;
         self.openTimerButton.enabled = NO;
@@ -322,6 +326,8 @@
         self.openPaletteButton.alpha = 1.0;
         self.openTimerButton.enabled = YES;
         self.openTimerButton.alpha = 1.0;
+        self.shareButton.enabled = NO;
+        self.shareButton.alpha = 0.5;
     }
 }
 
